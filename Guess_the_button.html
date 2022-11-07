@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <h1>Guess the winner button !</h1> 
+    </main>
+  <div class="btn-group"> 
+        <button class="button" id = "button_1"  onclick = "display_the_result(0)">click me!</button>  
+        <button class="button" id = "button_2"  onclick = "display_the_result(1)">click me!</button>  
+        <button class="button" id = "button_3"  onclick = "display_the_result(2)">click me!</button>  
+  <div  id = 'showmessage' ></div>
+</div>
+    <script src="script.js"></script>
+</body>
+
+<script>
+  function guess_the_Button(input) {
+    const choosenButton = document.getElementById('showmessage');
+    choosenButton.innerHTML="";
+    const winner = document.createElement('div');
+    winner.textContent = 'You guessed the winner button!';
+    const loser = document.createElement('div');
+    loser.textContent = 'You pressed the looser button!';
+    let random = Math.floor(Math.random() * 3);
+    if (input == random) {
+      chossenButton.appendChild(winner);
+    } else {
+      chossenButton.appendChild(loser)
+    }
+  }
+</script>
+
+</html>
+
